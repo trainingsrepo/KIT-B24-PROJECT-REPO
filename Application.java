@@ -23,6 +23,25 @@ class Bank {
         } else {
             System.out.println("Account not found!");
         }
+<
+		#feature102 code changes by vivek on User Transactions in sep2024
+		 public void addAccount(String accountNumber, String customerName, double balance) {
+        Account account = new Account(accountNumber, customerName, balance);
+        accounts.put(accountNumber, account);
+    }
+
+    public void displayAccountInfo(String accountNumber) {
+        if (accounts.containsKey(accountNumber)) {
+            Account account = accounts.get(accountNumber);
+            System.out.println("Account Number: " + account.getAccountNumber());
+            System.out.println("Customer Name: " + account.getCustomerName());
+            System.out.println("Balance: $" + account.getBalance());
+        } else {
+            System.out.println("Account not found!");
+        }
+    }
+#end of feature102 code changes
+
 		#feature101 code changes by Ethan working on User Reports in Sept2024
 		public static void main(String[] args) {
         Bank bank = new Bank();
@@ -41,4 +60,5 @@ class Bank {
     }
 	#end of feature101 code changes
 	
+
     }

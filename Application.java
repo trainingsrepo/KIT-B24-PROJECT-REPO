@@ -23,6 +23,7 @@ class Bank {
         } else {
             System.out.println("Account not found!");
         }
+<
 		#feature102 code changes by vivek on User Transactions in sep2024
 		 public void addAccount(String accountNumber, String customerName, double balance) {
         Account account = new Account(accountNumber, customerName, balance);
@@ -40,4 +41,24 @@ class Bank {
         }
     }
 #end of feature102 code changes
+
+		#feature101 code changes by Ethan working on User Reports in Sept2024
+		public static void main(String[] args) {
+        Bank bank = new Bank();
+
+        // Adding a few accounts
+        bank.addAccount("101", "John Doe", 1000.0);
+        bank.addAccount("102", "Jane Smith", 1500.0);
+
+        // Performing transactions
+        bank.performTransaction("101", 500.0);
+        bank.performTransaction("103", 200.0); // This account doesn't exist
+
+        // Displaying account information
+        bank.displayAccountInfo("101");
+        bank.displayAccountInfo("102");
+    }
+	#end of feature101 code changes
+	
+
     }
